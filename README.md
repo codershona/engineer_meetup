@@ -1,12 +1,42 @@
-# engineer_meetup
+# Engineer Meetup
 
-This is an Event Management Frontend Application 
+This is an event management online system.
 
-## Technologies Used
 
-* Vuetify 2.4.0
-* Vue 0.1.0
+### Technologies Used:
+* Vue cli 4.5.13 version
+* Vuetify
 * Firebase
+
+## Initial Project setup
+```
+vue create engineer_meetup
+```
+```
+cd engineer_meetup
+```
+```
+vue add vuetify
+```
+
+```
+This actually not necessary to run this command vue ui(optional)
+```
+
+## To Run Server into Browser
+```
+cd client
+```
+
+```
+npm run serve
+```
+Go to ```http://localhost:8080/#/```
+
+To create a production build, run
+```
+npm run build.
+```
 
 ## Project setup
 ```
