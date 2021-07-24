@@ -45,7 +45,11 @@
       prominent
       src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
     >
-      <v-app-bar-nav-icon @click.native.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon
+        @click.native.stop="drawer = !drawer"
+        class="hidden-sm-and-up"
+        >
+        </v-app-bar-nav-icon>
 
       <v-toolbar-title>Engineer's MeetUp</v-toolbar-title>
       <v-spacer></v-spacer>
