@@ -1,36 +1,4 @@
-# Engineer Meetup
-
-This is an event management online system.
-
-## Initial Project setup
-```
-vue create engineer_meetup
-```
-```
-cd engineer_meetup
-```
-```
-vue add vuetify
-```
-
-```
-vue ui
-```
-
-## To Run Server into Browser
-```
-cd client
-```
-
-```
-npm run serve
-```
-Go to ```http://localhost:8080/#/```
-
-To create a production build, run
-```
-npm run build.
-```
+# engineer_meetup
 
 ## Project setup
 ```
@@ -51,3 +19,6 @@ npm run build
 ```
 npm run lint
 ```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
