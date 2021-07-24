@@ -42,6 +42,7 @@
     <div>
     <v-toolbar
       dark
+      class="teal darken-1"
       prominent
       src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
     >
