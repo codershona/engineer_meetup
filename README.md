@@ -5,7 +5,7 @@ This is an event management online system.
 
 ### Technologies Used:
 * Vue cli 4.5.13 version
-* Vuetify
+* Vuetify 2.4.0
 * Firebase
 
 ## Initial Project setup
