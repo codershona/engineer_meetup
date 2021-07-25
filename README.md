@@ -57,3 +57,8 @@ npm run build
 ```
 npm run lint
 ```
+
+### Install Router
+```
+npm i vue-router
+```

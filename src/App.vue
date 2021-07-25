@@ -33,7 +33,6 @@
       dark
       class="teal darken-1"
       tile
-      max-height="600"
       src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
     >
       <v-app-bar-nav-icon
@@ -45,16 +44,26 @@
       <v-toolbar-title
       large
       >
+      <router-link
+      to="/"
+      tag="span"
+      style="cursor: pointer"
+      >
       Engineer's MeetUp
+      </router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
+      <v-toolbar-items
+      tile
+      small
+      flat
+      class="hidden-xs-only"
+      >
       <v-btn
-      depressed
-      elevation="2"
       v-for="item in menuItems" :key="item.title"
-      large
-      class="ma-2"
-      color="warning"
+      text
+      router
+      :to="item.link"
     >
       {{ item.title }}
       <v-icon
@@ -67,12 +76,13 @@
       <v-btn icon>
        <v-icon>mdi-export</v-icon>
       </v-btn>
+      </v-toolbar-items>
     </v-toolbar>
   </div>
 
-    <v-main>
-      <!--  -->
-    </v-main>
+    <main>
+      <router-view></router-view>
+    </main>
   </v-app>
 </template>
 
@@ -84,11 +94,11 @@ export default {
     return {
       drawer: false,
       menuItems: [
-        { icon: 'mdi-wrench', title: 'View Events' },
-        { icon: 'mdi-domain', title: 'Organize Events' },
-        { icon: 'mdi-account', title: 'Profile' },
-        { icon: 'mdi-face', title: 'Register/Signup' },
-        { icon: 'mdi-lock-open', title: 'Log in' }
+        { icon: 'mdi-wrench', title: 'View Events', link: '/meetups' },
+        { icon: 'mdi-domain', title: 'Organize Events', link: '/meetup/new' },
+        { icon: 'mdi-account', title: 'Profile', link: '/profile' },
+        { icon: 'mdi-face', title: 'Register/Signup', link: '/signup' },
+        { icon: 'mdi-lock-open', title: 'Log in', link: '/login' }
       ]
     }
   }
