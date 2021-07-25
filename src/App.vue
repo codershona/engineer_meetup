@@ -11,6 +11,7 @@
       >
         <v-list-item-group
           v-model="group"
+          v-for="item in menuItems" :key="item.title"
           active-class="deep-purple--text text--accent-4"
         >
           <v-list-item>
@@ -19,9 +20,9 @@
           left
           color="primary"
         >
-          mdi-wrench
+          {{ item.icon }}
         </v-icon>
-            <v-list-item-title>View Events</v-list-item-title>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item>
 
           <v-list-item>
@@ -43,7 +44,8 @@
     <v-toolbar
       dark
       class="teal darken-1"
-      prominent
+      tile
+      max-height="600"
       src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
     >
       <v-app-bar-nav-icon
@@ -52,21 +54,26 @@
         >
         </v-app-bar-nav-icon>
 
-      <v-toolbar-title>Engineer's MeetUp</v-toolbar-title>
+      <v-toolbar-title
+      large
+      >
+      Engineer's MeetUp
+      </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn
       depressed
       elevation="2"
+      v-for="item in menuItems" :key="item.title"
       large
       class="ma-2"
       color="warning"
     >
-      View Events
+      {{ item.title }}
       <v-icon
           dark
           right
         >
-          mdi-wrench
+         {{ item.icon }}
         </v-icon>
     </v-btn>
       <v-btn icon>
@@ -87,7 +94,14 @@
 export default {
   data () {
     return {
-      drawer: false
+      drawer: false,
+      menuItems: [
+        { icon: 'mdi-wrench', title: 'View Events' },
+        { icon: 'mdi-room', title: 'Organize Events' },
+        { icon: 'mdi-person', title: 'Profile' },
+        { icon: 'mdi-face', title: 'Register/Signup' },
+        { icon: 'mdi-lock-open', title: 'Log in' }
+      ]
     }
   }
 }
