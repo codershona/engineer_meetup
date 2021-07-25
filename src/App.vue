@@ -24,18 +24,6 @@
         </v-icon>
             <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item>
-
-          <v-list-item>
-            <v-list-item-title>Bar</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-title>Fizz</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-title>Buzz</v-list-item-title>
-          </v-list-item>
         </v-list-item-group>
       </v-list>
 
@@ -97,8 +85,8 @@ export default {
       drawer: false,
       menuItems: [
         { icon: 'mdi-wrench', title: 'View Events' },
-        { icon: 'mdi-room', title: 'Organize Events' },
-        { icon: 'mdi-person', title: 'Profile' },
+        { icon: 'mdi-domain', title: 'Organize Events' },
+        { icon: 'mdi-account', title: 'Profile' },
         { icon: 'mdi-face', title: 'Register/Signup' },
         { icon: 'mdi-lock-open', title: 'Log in' }
       ]
