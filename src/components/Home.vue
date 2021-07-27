@@ -1,10 +1,10 @@
 <template>
+   <div class="bodycolor">
     <v-container>
         <v-layout
         row
         wrap
         no-gutters
-        style="height: 150px;"
         >
          <v-flex
          xs12
@@ -40,6 +40,7 @@
     <v-layout
     row
     wrap
+    class="mt-2"
     >
         <v-flex
         xs12
@@ -55,7 +56,7 @@
          :key="meetup.id"
          :src="meetup.imageUrl"
          elevation="24"
-         max-width="444"
+         max-width="1200"
          class="mx-auto"
     >
      <v-row
@@ -73,7 +74,20 @@
   </v-carousel>
   </v-flex>
         </v-layout>
+         <v-layout
+        row
+        wrap
+        class="mt-2"
+        >
+         <v-flex
+         xs12
+         class="text-xs-center d-flex align-center justify-center pa-4 mx-auto"
+         >
+         <p>Join our Events!</p>
+            </v-flex>
+        </v-layout>
     </v-container>
+    </div>
 </template>
 
 
@@ -113,5 +127,11 @@ export default {
       color: white;
       font-size: 2.2em;
       padding: 20px;
+  }
+  .bodycolor {
+    background: #e1eec3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f05053, #e1eec3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f05053, #e1eec3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100%;
   }
 </style>
