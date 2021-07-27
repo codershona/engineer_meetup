@@ -6,7 +6,11 @@
         no-gutters
         style="height: 150px;"
         >
-         <v-flex xs12 sm6>
+         <v-flex
+         xs12
+         sm6
+         class="text-sm-right"
+         >
                 <v-btn
                 large
                 dark
