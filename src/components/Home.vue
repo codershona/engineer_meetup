@@ -12,20 +12,22 @@
          class="text-sm-right"
          >
                 <v-btn
+                class="ma-2"
                 large
                 dark
                 router to="/meetups"
-                class="pink"
+                color="pink"
                 >
                   Expore Events
                 </v-btn>
             </v-flex>
             <v-flex xs12 sm6>
                 <v-btn
+                class="ma-2"
                 large
                 dark
                 router to="/meetup/new"
-                class="teal"
+                color="teal"
                 >
                   Organize Events
                 </v-btn>
