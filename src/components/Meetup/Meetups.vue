@@ -1,5 +1,11 @@
 <template>
-    <div>
-        <p>This is second events meetup page</p>
-    </div>
+    <v-container>
+        <v-layout>
+            <v-flex 
+            xs12
+            >
+
+            </v-flex>
+        </v-layout>
+    </v-container>
 </template>
