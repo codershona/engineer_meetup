@@ -50,6 +50,7 @@
        hide-delimiter-background
        show-arrows-on-hover
        cycle
+       style="cursor: pointer"
        >
         <v-carousel-item
          v-for="meetup in meetups"
@@ -58,6 +59,7 @@
          elevation="24"
          max-width="1200"
          class="mx-auto"
+         @click="onLoadMeetup(meetup.id)"
     >
      <v-row
             class="fill-height"
@@ -114,6 +116,11 @@ export default {
                 }
             ]
         }
+    },
+    methods: {
+      onLoadMeetup(id) {
+       this.$router.push('/meetups/' + id)
+      }
     }
 }
 </script>
