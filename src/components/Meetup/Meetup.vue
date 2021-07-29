@@ -1,4 +1,5 @@
 <template>
+<div class="bodycolor">
   <v-container>
     <v-layout row wrap no-gutters>
       <v-flex
@@ -8,14 +9,16 @@
         max-width="900"
         class="mx-auto">
          <v-card-title>
-             <h5 class="teal--text">All Events</h5>
+             <h5 class="teal--text">
+               {{ meetup.title }}
+               </h5>
          </v-card-title>
          <v-img
-                  src="https://images.pexels.com/photos/6315188/pexels-photo-6315188.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  :src="meetup.imageUrl"
                   height="300px"
                 ></v-img>
                 <v-card-text>
-                    <div class="info--text">28th July 2021 - Where the events hosted?</div>
+                    <div class="info--text">{{ meetup.date }} -- Where the events hosted?</div>
                     <div>It has been hosted in New york Location and there was around 200 people who attended this events</div>
                 </v-card-text>
         <v-card-actions>
@@ -31,4 +34,25 @@
       </v-flex>
     </v-layout>
   </v-container>
+  </div>
 </template>
+
+<script>
+  export default {
+    props: ['id'],
+    computed: {
+      meetup () {
+        return this.$store.getters.loadedMeetup(this.id)
+      }
+    }
+  }
+</script>
+
+
+<style scoped>
+  .bodycolor {
+    background: rgb(155,164,210);
+    background: radial-gradient(circle, rgba(155,164,210,1) 0%, rgba(209,189,193,1) 100%);
+    width: 100%;
+  }
+</style>

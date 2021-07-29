@@ -62,3 +62,15 @@ npm run lint
 ```
 npm i vue-router
 ```
+
+
+### Install Vuex
+```
+npm install --save vuex
+```
+Or,
+```
+npm install vuex --save
+```
+
+

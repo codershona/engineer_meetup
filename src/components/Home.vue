@@ -95,28 +95,11 @@
 
 <script>
 export default {
-    data () {
-        return {
-            meetups: [
-                {
-                imageUrl: 'https://images.pexels.com/photos/6315188/pexels-photo-6315188.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500', id: 'afanedwe121',
-                title: 'Events in New York'
-                },
-                {
-                imageUrl: 'https://images.pexels.com/photos/7169637/pexels-photo-7169637.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500', id: 'afanedwe122',
-                title: 'Events in Canada'
-                },
-                {
-                imageUrl: 'https://images.pexels.com/photos/2526105/pexels-photo-2526105.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500', id: 'afanedwe123',
-                title: 'Events in Australia'
-                },
-                {
-                imageUrl: 'https://images.pexels.com/photos/7245330/pexels-photo-7245330.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500', id: 'afanedwe124',
-                title: 'Events in London'
-                }
-            ]
-        }
-    },
+  computed: {
+    meetups () {
+      return this.$store.getters.loadedMeetups
+    }
+  },
     methods: {
       onLoadMeetup(id) {
        this.$router.push('/meetups/' + id)
