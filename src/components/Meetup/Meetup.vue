@@ -1,5 +1,5 @@
 <template>
-<div class="bodycolor">
+  <div class="bodycolor">
   <v-container>
     <v-layout row wrap no-gutters>
       <v-flex
