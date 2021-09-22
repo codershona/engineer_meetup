@@ -2,6 +2,12 @@
 
 This is an event management online system.
 
+
+### Technologies Used:
+* Vue cli 4.5.13 version
+* Vuetify 2.4.0
+* Firebase
+
 ## Initial Project setup
 ```
 vue create engineer_meetup
@@ -14,7 +20,7 @@ vue add vuetify
 ```
 
 ```
-vue ui
+This actually not necessary to run this command vue ui(optional)
 ```
 
 ## To Run Server into Browser
@@ -51,3 +57,20 @@ npm run build
 ```
 npm run lint
 ```
+
+### Install Router
+```
+npm i vue-router
+```
+
+
+### Install Vuex
+```
+npm install --save vuex
+```
+Or,
+```
+npm install vuex --save
+```
+
+
